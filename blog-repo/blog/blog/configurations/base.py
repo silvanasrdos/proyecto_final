@@ -26,8 +26,10 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 #ALLOWED_HOSTS = ["localhost"]
 
-
+AUTH_USER_MODEL = 'user.User'
 # Application definition
+
+DEFAULT_POST_IMAGE = 'post/default/post_default.png'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -36,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'apps.post',
+    'apps.user',
+    
 ]
 
 MIDDLEWARE = [
